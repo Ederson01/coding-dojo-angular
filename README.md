@@ -1,3 +1,17 @@
+# App desenvolvida no dojo ocorrido em 26/08/2017 na usina de inovação
+# Ambiente
+## Editor - Atom
+## Node - nodejs.org
+## Angular Cli
+```
+  npm install -g @angular/cli
+```
+## Boostrap   -- após criar o projeto
+```
+npm install jquery --save
+npm install bootstrap --save
+```
+
 # AppDojo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.

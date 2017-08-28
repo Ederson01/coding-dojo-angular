@@ -1,0 +1,41 @@
+<div class="container">
+  <form novalidate class="form-inline">
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="userId"  style="margin-right: 5px">ID do usuário </label>
+        <input type="number" class="form-control" name="newUser.id" [(ngModel)]="newUser.id"  placeholder="Insira o ID">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="userName" style="margin-right: 5px">Nome </label>
+        <input type="text" class="form-control" name="newUser.name"  [(ngModel)]="newUser.name" placeholder="Insira o Nome">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <button (click)="addUser(newUser)" class="btn btn-primary">{{btnName}}</button>
+    </div>
+  </form>
+  <div style="margin-top:10px">
+    <table class="table" style="width:100%;margin-top:50px">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+     <tbody>
+      <tr  *ngFor="let u of users; let i = index; trackBy index;">
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>
+          <button (click)="editUser(u)" class="btn btn-warning btn-sm"  >Editar</button>
+          <button (click)="delUser(i)" class="btn btn-danger btn-sm"  >Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+
+</div>
